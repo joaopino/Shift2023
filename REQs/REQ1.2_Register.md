@@ -1,6 +1,6 @@
 # Use Case 2
 
-* Register
+* Registrar
 
 ## ** Precondition** 
 
@@ -8,24 +8,19 @@
 
 ## ** Success Guarantee**
 
-* The user creates a profile in the website
-* The user can authenticate in to the website
+* O utilizador cria um perfil no website
+* O utilizador fica autenticado no website
 
 ## ** Main Success Scenario**
 
-1. The user selects register in the landing page
-2. The user inputs the following information:
+1. O utilizador clica em registrar na landing page
+2. O utilizador introduz a seguinte informação:
     1. Email
     2. Password
-    3. Name
-    4. Location
-    5. Contact
-    6. Type of user -> (Produtor | Revendedor)
-3. The user inputs the correct username and password
+    3. Nome
+    4. Localização
+    5. Contacto
+    6. Tipo de utilizador -> (Produtor | Revendedor)
 
 
 ## Alternative Path
-
-2. (a) If the user is a producer:
-   1. The user must input the following extra information
-      1. Nome da Quinta

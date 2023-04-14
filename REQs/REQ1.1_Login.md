@@ -4,18 +4,17 @@
 
 ## ** Precondition** 
 
-* The user has registered before
+* O utilizador já se encontra registado no website
 
 ## ** Success Guarantee**
 
-* The user can authenticate in to the website
+* O utilizador consegue autenticar-se no website
 
 ## ** Main Success Scenario**
 
-1. The user accesses the landing page of the website
-2. The user clicks the log in button
-3. The user inputs the correct username and password
-
+1. O utilizador entra na landing page do website
+2. O utilizador clica no botão de login
+3. O utilizador introduz o email e a password
 
 ## Alternative Path
 
