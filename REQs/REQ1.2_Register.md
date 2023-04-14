@@ -20,7 +20,7 @@
     3. Name
     4. Location
     5. Contact
-    6. Type of user
+    6. Type of user -> (Produtor | Revendedor)
 3. The user inputs the correct username and password
 
 
