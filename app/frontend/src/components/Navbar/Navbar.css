@@ -1,0 +1,18 @@
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-logo {
+    display: flex;
+    justify-content: flex-start;
+    padding: 2rem 0rem 0rem 4rem;
+}
+
+.navbar-login {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem 4rem 0rem 0rem;
+}
