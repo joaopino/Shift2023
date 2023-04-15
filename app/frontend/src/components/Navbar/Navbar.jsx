@@ -3,8 +3,6 @@ import images from '../../constants'
 import './Navbar.css'
 
 const Navbar = () => {
-    // const [toggleMenu, setToggleMenu] = React.useState(false);
-
     return (
         <nav className='Navbar'>
             <div className="navbar-logo">
@@ -12,7 +10,9 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-login">
-                <img src={images.green_little_guy} alt="" />
+                <a href="/#">
+                    <img src={images.green_little_guy} alt="" />
+                </a>
             </div>
         </nav>
     )
