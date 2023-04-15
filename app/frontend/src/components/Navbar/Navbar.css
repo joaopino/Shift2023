@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    background-color: var(--color-white);
 }
 
 .navbar-logo {
@@ -11,8 +12,23 @@
     padding: 2rem 0rem 0rem 4rem;
 }
 
+.navbar-logo img {
+    width: 4rem;
+}
+
 .navbar-login {
     display: flex;
     justify-content: flex-end;
     padding: 2rem 4rem 0rem 0rem;
+}
+
+.navbar-login a {
+    text-decoration: none;
+    color: var(--color-brown);
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-brown);
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
 }

@@ -1,0 +1,35 @@
+.app_register {
+    width: 100%;
+    height: 100vh;
+    background: rgba(151, 183, 136, 0.4);
+    display: flex;
+    flex-direction: column;
+}
+
+.app_register-container {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    align-self: center;
+}
+
+.app_register-container-form {
+    width: 100%;
+
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.app_register-container-form h1 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}

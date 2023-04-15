@@ -6,11 +6,9 @@ import './Landing.css'
 
 function Landing() {
     return (
-        <div className="Landing">
-            <div className="Landing-Nav">
-                <Navbar />
-            </div>
-            <section className="Landing-Body">
+        <div className="app_landing">
+            <Navbar />
+            <section className="app_landing-body">
                 <img src={images.logo} alt="Localee_logo" />
             </section>
         </div>
