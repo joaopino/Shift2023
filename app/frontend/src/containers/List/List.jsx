@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { Navbar, Pop } from '../../components'
-import images from '../../constants'
-import { saveAs } from 'file-saver';
+import { Navbar} from '../../components'
 
 import './List.css'
 
 function List() {
-    const [dados, setDados] = useState([
+    const [dados] = useState([
         { produto: "Batata", quant: "10kg", nome: "António Silva", preco: "20€" },
         { produto: "Cenoura", quant: "5kg", nome: "Manuel Machado", preco: "25€" },
         { produto: "Couve", quant: "20kg", nome: "Manuel Santos", preco: "40€" },

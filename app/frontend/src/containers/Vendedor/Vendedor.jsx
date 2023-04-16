@@ -1,11 +1,11 @@
-import React, { useState, useNavigate } from 'react';
+import React, { useState } from 'react';
 import { Navbar, Pop } from '../../components'
 import images from '../../constants'
 
 import './Vendedor.css'
 
 function Vendedor() {
-    const [dados, setDados] = useState([
+    const [dados] = useState([
         { data: "16/04", estado: "T" },
         { data: "10/04", estado: "F" },
     ]);

@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { Navbar, Pop } from '../../components'
-import images from '../../constants'
+import React from 'react';
+import { Navbar } from '../../components'
 import { saveAs } from 'file-saver';
 
 import './Pdf.css'

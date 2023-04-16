@@ -6,11 +6,11 @@ import { MdOutlineClose } from 'react-icons/md';
 import './Agricultor.css'
 
 function Agricultor() {
-    const [dados, setDados] = useState([
+    const [dados] = useState([
         { data: "16/04", estado: "T" },
         { data: "10/04", estado: "F" },
     ]);
-    const [produtos, setProdutos] = useState([
+    const [produtos] = useState([
         { produto: "Batata", quant: "100 kg", preco: "3€/kg" },
         { produto: "Couve", quant: "35 kg", preco: "2€/kg" },
         { produto: "Cenoura", quant: "10 kg", preco: "2€/kg" },
