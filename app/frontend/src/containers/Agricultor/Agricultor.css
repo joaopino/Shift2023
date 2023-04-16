@@ -35,13 +35,11 @@
     align-items: center;
     display: flex;
     justify-content: flex-start;
-    width: 50%;
     margin-left: 5.5rem;
 }
 
 .app_agricultor-star {
     align-items: center;
-    width: 50%;
     display: flex;
     justify-content: center;
     margin-right: 5.5rem;
@@ -59,7 +57,7 @@
 }
 
 .app_agricultor-green {
-    margin-top: 2rem;
+    margin-top: 5rem;
     background-color: var(--color-green);
     display: flex;
     flex-direction: column;
@@ -70,6 +68,10 @@
 .app_agricultor-margin {
     margin-top: 2rem;
     margin-left: 5.5rem;
+}
+
+.app_agricultor-margin1 {
+    margin-left: 2rem;
 }
 
 .app_agricultor-margin ul {

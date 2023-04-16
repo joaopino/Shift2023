@@ -6,8 +6,8 @@ import './Agricultor.css'
 
 function Agricultor() {
     const [dados, setDados] = useState([
-        { produto: "Batata", quant: "100 kg", estado: "T" },
-        { produto: "Cenoura", quant: "10 kg", estado: "F" },
+        { data: "16/04", estado: "T" },
+        { data: "10/04", estado: "F" },
     ]);
     const [produtos, setProdutos] = useState([
         { produto: "Batata", quant: "100 kg", preco: "3€/kg" },
@@ -26,7 +26,7 @@ function Agricultor() {
                     <div className='app_agricultor-foto'>
                         <img src={images.pino} alt="Productor" />
                     </div>
-                    <div className='app_agricultor-margin'>
+                    <div className='app_agricultor-margin1'>
                         <div className='app_agricultor-nome'>
                             João Pino
                         </div>
@@ -72,10 +72,9 @@ function Agricultor() {
                     <table style={{ lineHeight: "5" }}>
                         <tbody>
                             {dados.map((item) => (
-                                <tr key={item.produto}>
+                                <tr key={item.data}>
                                     <td width={"300rem"} className='app_agricultor-prod'><a href=''>Encomenda</a></td>
-                                    <td width={"300rem"} className='app_agricultor-desc'>{item.produto}</td>
-                                    <td width={"300rem"} className='app_agricultor-desc'>{item.quant}</td>
+                                    <td width={"170rem"} className='app_agricultor-desc'>{item.data}</td>
                                     {item.estado === "T" ? (
                                         <div>
                                             <td width={"300rem"}>
@@ -104,9 +103,9 @@ function Agricultor() {
                         <tbody>
                             {produtos.map((item) => (
                                 <tr key={item.produto}>
-                                    <td width={"300rem"} className='app_agricultor-prod'>{item.produto}</td>
-                                    <td width={"300rem"} className='app_agricultor-desc'>{item.quant}</td>
-                                    <td width={"300rem"} className='app_agricultor-prod'>{item.preco}</td>
+                                    <td width={"250rem"} className='app_agricultor-prod'>{item.produto}</td>
+                                    <td width={"200rem"} className='app_agricultor-desc'>{item.quant}</td>
+                                    <td width={"200rem"} className='app_agricultor-prod'>{item.preco}</td>
                                     <td width={"300rem"}>
                                         <button className='app_agricultor-button'>Editar</button>
                                     </td>

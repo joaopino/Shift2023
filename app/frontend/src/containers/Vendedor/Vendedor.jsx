@@ -18,7 +18,7 @@ function Vendedor() {
                     <div className='app_agricultor-foto'>
                         <img src={images.pino} alt="Productor" />
                     </div>
-                    <div className='app_agricultor-margin'>
+                    <div className='app_agricultor-margin1'>
                         <div className='app_agricultor-nome'>
                             Mega Leguminosas
                         </div>
