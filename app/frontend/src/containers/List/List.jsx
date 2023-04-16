@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Navbar, Pop } from '../../components'
 import images from '../../constants'
+import { saveAs } from 'file-saver';
 
 import './List.css'
 
@@ -13,9 +14,6 @@ function List() {
         { produto: "Cenoura", quant: "5kg", nome: "Manuel Machado", preco: "25€" },
         { produto: "Couve", quant: "20kg", nome: "Manuel Santos", preco: "40€" },
     ]);
-
-
-    const [btnPopUp, setBtnPopUp] = useState(false);
 
     return (
         <div className="app_list">
