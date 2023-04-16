@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+
+*::selection {
+  color: var(--color-white);
+  background: var(--color-brown);
+}
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
