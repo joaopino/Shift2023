@@ -12,21 +12,28 @@ function Vendedor() {
         { data: "10/04", estado: "F" },
     ]);
 
-    const {loading:userLoading,error:userError,data:userData} = useFetch("http://localhost:1337/api/users/6?filters[tipo][$eq]=Revendedor")
-    const {loading: encomendasloading,error: encomendaserror,data: encomendasData} = useFetch("http://localhost:1337/api/encomendas?populate=anuncios")
+    const [list] = useState([
+        { produto: "Batata", quant: "100 Kg" },
+        { produto: "Cenoura", quant: "15 Kg" },
+        { produto: "Cebola", quant: "30 Kg" },
+    ]);
+
+    const [btnPopUp, setBtnPopUp] = useState(false);
+
+    function handlePopUp() {
+        setBtnPopUp(!btnPopUp);
+    }
+
+    
+
+    const {loading:userLoading,error:userError,data:userData} = useFetch("http://localhost:1337/api/users/1?filters[tipo][$eq]=Revendedor")
+    // const {loading: encomendasloading,error: encomendaserror,data: encomendasData} = useFetch("http://localhost:1337/api/encomendas?populate=anuncios")
 
 
-    if(userLoading | encomendasloading) return <p>Loading...</p>
-    if(userError | encomendaserror ) return <p>ERROR</p>
-    //console.log(encomendasData.data[0])
+    if(userLoading/*  | encomendasloading */) return <p>Loading...</p>
+    if(userError /* | encomendaserror  */) return <p>ERROR</p>
+    console.log(userData)
 
-    encomendasData.data.map((encomendas) => {
-        const array =  encomendas.attributes.anuncios.data
-        array.forEach(element => {
-            console.log(element.attributes.tipo_de_produto + " " + element.attributes.quantidade )
-        });
-
-    })
 
     return (
         <div className="app_vendedor">
@@ -88,7 +95,7 @@ function Vendedor() {
 
 
                                 <tr key={item.data}>
-                                    <td width={"350rem"} className='app_agricultor-prod app_agricultor-prod2' /* onClick={handlePopUp} */>Encomendado</td>
+                                    <td width={"350rem"} className='app_agricultor-prod app_agricultor-prod2' onClick={handlePopUp}>Encomendado</td>
                                     <td width={"180rem"} className='app_agricultor-desc'>{item.data}</td>
                                     {item.estado === "T" ? (
                                         <div>
@@ -111,7 +118,7 @@ function Vendedor() {
                 </div>
             </div>
 
-            {/* <Pop trigger={btnPopUp} setTrigger={setBtnPopUp}>
+            <Pop trigger={btnPopUp} setTrigger={setBtnPopUp}>
                 <MdOutlineClose fontSize={27} className='close-btn' onClick={() => { setBtnPopUp(false) }} />
                 <div className='app_agricultor-pop'>
                     <span className='app_agricultor-pop-desc-header'>Encomenda</span>
@@ -133,7 +140,7 @@ function Vendedor() {
                         </div>
                     </div>
                 </div>
-            </Pop> */}
+            </Pop>
 
         </div>
     )
