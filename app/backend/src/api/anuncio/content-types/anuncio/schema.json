@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "anuncios",
+  "info": {
+    "singularName": "anuncio",
+    "pluralName": "anuncios",
+    "displayName": "Anuncio"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipo_de_produto": {
+      "type": "string"
+    },
+    "quantidade": {
+      "type": "integer"
+    },
+    "preco": {
+      "type": "integer"
+    },
+    "agricultor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}
