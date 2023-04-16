@@ -86,7 +86,7 @@ function Vendedor() {
                                     {item.estado === "T" ? (
                                         <div>
                                             <td width={"300rem"}>
-                                                <button className='app_agricultor-button'>Por aceitar</button>
+                                                <button className='app_vendedor-button'>Por aceitar</button>
                                             </td>
                                         </div>
                                     ) : (

@@ -6,3 +6,12 @@
     align-items: flex-start;
     margin-bottom: 10rem;
 }
+
+.app_vendedor-button {
+    background-color: var(--color-green-button);
+    color: var(--color-white);
+    border: 0rem;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 59px;
+}
