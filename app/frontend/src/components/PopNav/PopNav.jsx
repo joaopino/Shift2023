@@ -3,8 +3,8 @@ import './PopNav.css'
 
 function PopNav(props) {
   return (props.trigger) ? (
-    <div className='popup'>
-        <div className='popup-inner'>
+    <div className='popup1'>
+        <div className='popup-inner1'>
             {props.children}
         </div>
     </div>

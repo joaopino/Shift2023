@@ -30,7 +30,7 @@ const Navbar = (props) => {
 
             )}
             <PopNav trigger={btnPopUp} setTrigger={setBtnPopUp} color="var(--color-green)">
-                <MdOutlineClose fontSize={27} className='close-btn' onClick={() => { setBtnPopUp(false) }} />
+                <MdOutlineClose fontSize={27} className='close-btn1' onClick={() => { setBtnPopUp(false) }} />
                 <div className='navbar-pop'>
                     <div className="navbar-container-form">
                         <form action="">
