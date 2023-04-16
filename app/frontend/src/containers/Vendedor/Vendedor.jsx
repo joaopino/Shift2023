@@ -1,22 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useNavigate } from 'react';
 import { Navbar, Pop } from '../../components'
 import images from '../../constants'
 
-import './Agricultor.css'
+import './Vendedor.css'
 
-function Agricultor() {
+function Vendedor() {
     const [dados, setDados] = useState([
-        { produto: "Batata", quant: "100 kg", estado: "T" },
-        { produto: "Cenoura", quant: "10 kg", estado: "F" },
+        { produto: "Batata", quant: "100 kg", preco: "300€", estado: "T" },
+        { produto: "Cenoura", quant: "10 kg", preco: "20€", estado: "F" },
     ]);
-    const [produtos, setProdutos] = useState([
-        { produto: "Batata", quant: "100 kg", preco: "3€/kg" },
-        { produto: "Couve", quant: "35 kg", preco: "2€/kg" },
-        { produto: "Cenoura", quant: "10 kg", preco: "2€/kg" },
-    ]);
-
-
-    const [btnPopUp, setBtnPopUp] = useState(false);
 
     return (
         <div className="app_agricultor">
@@ -28,13 +20,13 @@ function Agricultor() {
                     </div>
                     <div className='app_agricultor-margin'>
                         <div className='app_agricultor-nome'>
-                            João Pino
+                            Mega Leguminosas
                         </div>
                         <div className='app_agricultor-loc'>
                             Aveiro
                         </div>
                         <div className='app_agricultor-email'>
-                            joaopinao@gmail.com
+                            vendemoslegumes@gmail.com
                         </div>
                     </div>
                 </div>
@@ -73,60 +65,28 @@ function Agricultor() {
                         <tbody>
                             {dados.map((item) => (
                                 <tr key={item.produto}>
-                                    <td width={"300rem"} className='app_agricultor-prod'><a href=''>Encomenda</a></td>
+                                    <td width={"400rem"} className='app_agricultor-prod'><a href=''>Encomendado</a></td>
                                     <td width={"300rem"} className='app_agricultor-desc'>{item.produto}</td>
                                     <td width={"300rem"} className='app_agricultor-desc'>{item.quant}</td>
                                     {item.estado === "T" ? (
                                         <div>
                                             <td width={"300rem"}>
-                                                <button className='app_agricultor-button'>Aceitar</button>
-                                            </td>
-                                            <td width={"300rem"}>
-                                                <button className='app_agricultor-button'>Eliminar</button>
+                                                <button className='app_agricultor-button'>Por aceitar</button>
                                             </td>
                                         </div>
                                     ) : (
                                         <td width={"300rem"}>
-                                            <button className='app_agricultor-button-emcurso'>Em curso</button>
+                                            <button className='app_agricultor-button-emcurso'>Em distribuição</button>
                                         </td>
                                     )}
                                 </tr>
                             ))}
                         </tbody>
                     </table>
-
-                    <br /><br /><br /><br /><br />
-
-                    <div className='app_agricultor-title'>
-                        Anuncios
-                    </div>
-                    <table style={{ lineHeight: "5" }}>
-                        <tbody>
-                            {produtos.map((item) => (
-                                <tr key={item.produto}>
-                                    <td width={"300rem"} className='app_agricultor-prod'>{item.produto}</td>
-                                    <td width={"300rem"} className='app_agricultor-desc'>{item.quant}</td>
-                                    <td width={"300rem"} className='app_agricultor-prod'>{item.preco}</td>
-                                    <td width={"300rem"}>
-                                        <button className='app_agricultor-button'>Editar</button>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                    <br />
-                    <button className='app_agricultor-button-emcurso app_agricultor-adicionar'>Adicionar</button>
                 </div>
             </div>
-
-            <Pop
-                trigger={btnPopUp}
-                setTrigger={setBtnPopUp}
-
-            />
-
         </div>
     )
 }
 
-export default Agricultor
+export default Vendedor

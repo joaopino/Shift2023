@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 36rem;
+    margin-bottom: 37rem;
 }
 
 .app_agricultor-foto img {
@@ -89,6 +89,17 @@
     line-height: 59px;
 }
 
+.app_agricultor-prod a {
+    text-decoration: none;
+    color: var(--color-brown);
+    transition: 0.5s ease ;
+}
+
+.app_agricultor-prod a:hover {
+    font-size: 40px;
+}
+
+
 .app_agricultor-desc {
     font-weight: 400;
     font-size: 36px;
@@ -102,6 +113,7 @@
     font-weight: 500;
     font-size: 36px;
     line-height: 59px;
+    cursor: pointer;
 }
 
 .app_agricultor-button-emcurso {
@@ -115,4 +127,5 @@
 
 .app_agricultor-adicionar {
     margin-bottom: 1rem;
+    cursor: pointer;
 }
