@@ -6,17 +6,17 @@ import './Vendedor.css'
 
 function Vendedor() {
     const [dados, setDados] = useState([
-        { produto: "Batata", quant: "100 kg", preco: "300€", estado: "T" },
-        { produto: "Cenoura", quant: "10 kg", preco: "20€", estado: "F" },
+        { data: "16/04", estado: "T" },
+        { data: "10/04", estado: "F" },
     ]);
 
     return (
-        <div className="app_agricultor">
+        <div className="app_vendedor">
             <Navbar />
             <div className='app_agricultor-lado2'>
                 <div className='app_agricultor-lado'>
                     <div className='app_agricultor-foto'>
-                        <img src={images.pino} alt="Productor" />
+                        <img src={images.store} alt="Productor" />
                     </div>
                     <div className='app_agricultor-margin1'>
                         <div className='app_agricultor-nome'>
@@ -35,7 +35,7 @@ function Vendedor() {
                         {
                             (() => {
                                 var d = [];
-                                for (let i = 0; i < 4; i++) {
+                                for (let i = 0; i < 3; i++) {
                                     d.push(<img src={images.star_brown} alt="star" />)
                                 }
                                 return d;
@@ -47,7 +47,7 @@ function Vendedor() {
                         {
                             (() => {
                                 var d = [];
-                                for (let i = 0; i < 1; i++) {
+                                for (let i = 0; i < 2; i++) {
                                     d.push(<img src={images.star_green} alt="star" />)
                                 }
                                 return d;
@@ -64,10 +64,9 @@ function Vendedor() {
                     <table style={{ lineHeight: "5" }}>
                         <tbody>
                             {dados.map((item) => (
-                                <tr key={item.produto}>
-                                    <td width={"400rem"} className='app_agricultor-prod'><a href=''>Encomendado</a></td>
-                                    <td width={"300rem"} className='app_agricultor-desc'>{item.produto}</td>
-                                    <td width={"300rem"} className='app_agricultor-desc'>{item.quant}</td>
+                                <tr key={item.data}>
+                                    <td width={"350rem"} className='app_agricultor-prod'><a href=''>Encomendado</a></td>
+                                    <td width={"180rem"} className='app_agricultor-desc'>{item.data}</td>
                                     {item.estado === "T" ? (
                                         <div>
                                             <td width={"300rem"}>
