@@ -1,0 +1,223 @@
+.app_agricultor {
+    height: 100vh;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 45rem;
+}
+
+.app_agricultor-foto img {
+    border: 5px solid var(--color-green-button);
+    width: 15rem;
+}
+
+.app_agricultor-icon img {
+   width: 15rem; 
+}
+
+.app_agricultor-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10rem;
+}
+
+.app_agricultor-margin {
+    margin-left: 1.5rem;
+}
+
+.app_agricultor-nome {
+    font-weight: 600;
+    font-size: 58px;
+}
+
+.app_agricultor-loc {
+    font-weight: 600;
+    font-size: 48px;
+}
+
+.app_agricultor-email {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.app_agricultor-lado {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 5.5rem;
+}
+
+.app_agricultor-star {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.app_agricultor-star ul {
+    padding: 0;
+}
+
+.app_agricultor-lado2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.app_agricultor-green {
+    margin: 5rem 0;
+    padding: 0 0 2rem 0;
+    background-color: var(--color-green);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.app_agricultor-margin {
+    margin-top: 2rem;
+    margin-left: 5.5rem;
+}
+
+.app_agricultor-margin1 {
+    margin-left: 2rem;
+}
+
+.app_agricultor-margin ul {
+    padding: 0;
+}
+
+.app_agricultor-title {
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 78px;
+    margin-bottom: 1rem;
+}
+
+.app_agricultor-prod {
+    font-weight: 500;
+    font-size: 33px;
+    line-height: 59px;
+}
+
+.app_agricultor-prod2 {
+    text-decoration: none;
+    color: var(--color-brown);
+    transition: 0.5s ease ;
+    cursor: pointer;
+}
+
+.app_agricultor-prod2:hover {
+    text-decoration: underline;
+}
+
+.app_agricultor-desc {
+    font-weight: 400;
+    font-size: 33px;
+    line-height: 59px;
+}
+
+.app_agricultor-button {
+    background-color: var(--color-green-button);
+    color: var(--color-white);
+    border: 0rem;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 59px;
+    cursor: pointer;
+    margin: 0 1rem 0 0;
+}
+
+.app_agricultor-button-emcurso {
+    background-color: var(--color-white);
+    color: var(--color-green-button);
+    border: 0rem;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 59px;
+}
+
+.app_agricultor-adicionar {
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.app_agricultor-pop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.app_agricultor-pop-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.app_agricultor-pop-title {
+    font-weight: 600;
+    font-size: 2.1rem;
+}
+
+.app_agricultor-pop-local {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.app_agricultor-pop-email {
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.app_agricultor-pop-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.app_agricultor-pop-desc div {
+    font-size: 1.8rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.app_agricultor-pop-text {
+    font-size: 1.8rem;
+}
+
+.app_agricultor-pop-desc-header {
+    font-weight: 600;
+    font-size: 1.8rem;
+
+    color: var(--color-green-button);
+}
+
+.app_agricultor-pop-desc-footer {
+    width: 100%;
+    padding: 1rem 0 0 0;
+    font-weight: 600;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app_agricultor-pop-desc-footer-total {
+
+    font-weight: 600;
+    font-size: 1.8rem;
+
+    color: var(--color-green-button);
+}
+
+.app_agricultor-pop-desc-footer-buttons {
+    display: flex;
+    gap: 1rem;
+}
