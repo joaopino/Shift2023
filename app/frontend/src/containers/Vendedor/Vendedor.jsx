@@ -1,6 +1,7 @@
 import React, { useState, useNavigate } from 'react';
 import { Navbar, Pop } from '../../components'
 import images from '../../constants'
+import useFetch from '../../hooks/useFetch.js'
 
 import './Vendedor.css'
 
@@ -9,6 +10,22 @@ function Vendedor() {
         { data: "16/04", estado: "T" },
         { data: "10/04", estado: "F" },
     ]);
+
+    const {loading:userLoading,error:userError,data:userData} = useFetch("http://localhost:1337/api/users/6?filters[tipo][$eq]=Revendedor")
+    const {loading: encomendasloading,error: encomendaserror,data: encomendasData} = useFetch("http://localhost:1337/api/encomendas?populate=anuncios")
+
+
+    if(userLoading | encomendasloading) return <p>Loading...</p>
+    if(userError | encomendaserror ) return <p>ERROR</p>
+    //console.log(encomendasData.data[0])
+
+    encomendasData.data.map((encomendas) => {
+        const array =  encomendas.attributes.anuncios.data
+        array.forEach(element => {
+            console.log(element.attributes.tipo_de_produto + " " + element.attributes.quantidade )
+        });
+
+    })
 
     return (
         <div className="app_vendedor">
@@ -20,13 +37,13 @@ function Vendedor() {
                     </div>
                     <div className='app_agricultor-margin1'>
                         <div className='app_agricultor-nome'>
-                            Mega Leguminosas
+                            {userData.username}
                         </div>
                         <div className='app_agricultor-loc'>
-                            Aveiro
+                            {userData.localizacao}
                         </div>
                         <div className='app_agricultor-email'>
-                            vendemoslegumes@gmail.com
+                            {userData.email}
                         </div>
                     </div>
                 </div>
@@ -64,6 +81,8 @@ function Vendedor() {
                     <table style={{ lineHeight: "5" }}>
                         <tbody>
                             {dados.map((item) => (
+
+
                                 <tr key={item.data}>
                                     <td width={"350rem"} className='app_agricultor-prod'><a href=''>Encomendado</a></td>
                                     <td width={"180rem"} className='app_agricultor-desc'>{item.data}</td>
@@ -79,6 +98,9 @@ function Vendedor() {
                                         </td>
                                     )}
                                 </tr>
+                            
+                            
+                            
                             ))}
                         </tbody>
                     </table>
@@ -86,6 +108,7 @@ function Vendedor() {
             </div>
         </div>
     )
+    
 }
 
 export default Vendedor
