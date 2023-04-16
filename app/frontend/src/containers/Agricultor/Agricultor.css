@@ -1,0 +1,118 @@
+.app_agricultor {
+    height: 100vh;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 36rem;
+}
+
+.app_agricultor-foto img {
+    border: 3px solid green;
+    width: 15rem;
+}
+
+.app_agricultor-margin {
+    margin-left: 1.5rem;
+}
+
+.app_agricultor-nome {
+    font-weight: 600;
+    font-size: 64px;
+}
+
+.app_agricultor-loc {
+    font-weight: 600;
+    font-size: 48px;
+}
+
+.app_agricultor-email {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.app_agricultor-lado {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    margin-left: 5.5rem;
+}
+
+.app_agricultor-star {
+    align-items: center;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin-right: 5.5rem;
+}
+
+.app_agricultor-star ul {
+    padding: 0;
+}
+
+.app_agricultor-lado2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.app_agricultor-green {
+    margin-top: 2rem;
+    background-color: var(--color-green);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.app_agricultor-margin {
+    margin-top: 2rem;
+    margin-left: 5.5rem;
+}
+
+.app_agricultor-margin ul {
+    padding: 0;
+}
+
+.app_agricultor-title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 78px;
+    margin-bottom: 1rem;
+}
+
+.app_agricultor-prod {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 59px;
+}
+
+.app_agricultor-desc {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 59px;
+}
+
+.app_agricultor-button {
+    background-color: var(--color-green-button);
+    color: var(--color-white);
+    border: 0rem;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 59px;
+}
+
+.app_agricultor-button-emcurso {
+    background-color: var(--color-white);
+    color: var(--color-green-button);
+    border: 0rem;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 59px;
+}
+
+.app_agricultor-adicionar {
+    margin-bottom: 1rem;
+}
