@@ -28,9 +28,15 @@ function Agricultor() {
         setBtnPopUp(!btnPopUp);
     }
 
+    const [btnPopUpAdd, setBtnPopUpAdd] = useState(false);
+
+    function handlePopUpAdd() {
+        setBtnPopUpAdd(!btnPopUpAdd);
+    }
+
     return (
         <div className="app_agricultor">
-            <Navbar/>
+            <Navbar />
             <div className='app_agricultor-lado2'>
                 <div className='app_agricultor-lado'>
                     <div className='app_agricultor-foto'>
@@ -38,13 +44,13 @@ function Agricultor() {
                     </div>
                     <div className='app_agricultor-margin1'>
                         <div className='app_agricultor-nome'>
-                            João Pino
+                            Filipe Soares
                         </div>
                         <div className='app_agricultor-loc'>
-                            Aveiro
+                            Coimbra
                         </div>
                         <div className='app_agricultor-email'>
-                            joaopinao@gmail.com
+                            filipesoares@gmail.com
                         </div>
                     </div>
                 </div>
@@ -127,9 +133,35 @@ function Agricultor() {
                         </tbody>
                     </table>
                     <br />
-                    <button className='app_agricultor-button-emcurso app_agricultor-adicionar'>Adicionar</button>
+                    <button onClick={handlePopUpAdd} className='app_agricultor-button-emcurso app_agricultor-adicionar'>Adicionar</button>
                 </div>
             </div>
+
+            <Pop trigger={btnPopUpAdd} setTrigger={setBtnPopUpAdd}>
+                <MdOutlineClose fontSize={27} className='close-btn' onClick={() => { setBtnPopUpAdd(false) }} />
+                <div className='app_agricultor-pop'>
+                    <div className="agri-container-form">
+                        <form action="">
+                            {/* if email is manel then redirect to /produtor */}
+                            <div className="popup-text">
+                                <label htmlFor="produto">Produto</label>
+                                <input type="text" name="produto" id="produto" />
+                            </div>
+                            <div className="popup-text">
+                                <label htmlFor="quantidade">Quantidade</label>
+                                <input type="text" name="quantidade" id="quantidade" />
+                            </div>
+                            <div className="popup-text">
+                                <label htmlFor="preco">Preço/kg</label>
+                                <input type="text" name="preco" id="preco" />
+                            </div>
+
+
+                        </form>
+                        <button onClick={handlePopUpAdd} className='app_agricultor-buttona'>Adicionar</button>
+                    </div>
+                </div>
+            </Pop>
 
             <Pop trigger={btnPopUp} setTrigger={setBtnPopUp}>
                 <MdOutlineClose fontSize={27} className='close-btn' onClick={() => { setBtnPopUp(false) }} />
@@ -142,15 +174,15 @@ function Agricultor() {
                     <div className='app_agricultor-pop-desc'>
                         <span className='app_agricultor-pop-desc-header'>Encomenda</span>
                         <table style={{ lineHeight: "1.5" }}>
-                        <tbody>
-                            {list.map((item) => (
-                                <tr key={item.prod}>
-                                    <td width={"180rem"} style = {{textAlign: 'left'}} className='app_agricultor-pop-text'>{item.produto}</td>
-                                    <td style = {{textAlign: 'left'}} className='app_agricultor-pop-text'>{item.quant}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                            <tbody>
+                                {list.map((item) => (
+                                    <tr key={item.prod}>
+                                        <td width={"180rem"} style={{ textAlign: 'left' }} className='app_agricultor-pop-text'>{item.produto}</td>
+                                        <td style={{ textAlign: 'left' }} className='app_agricultor-pop-text'>{item.quant}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
                     <div className='app_agricultor-pop-desc-footer'>
                         <div className='app_agricultor-pop-desc-footer-data'>
@@ -158,10 +190,6 @@ function Agricultor() {
                             <span className='app_agricultor-pop-desc-footer-quant'>400€</span>
 
                         </div>
-                        {/* <div className='app_agricultor-pop-desc-footer-buttons'>
-                            <button className='app_agricultor-button'>Aceitar</button>
-                            <button className='app_agricultor-button'>Eliminar</button>
-                        </div> */}
                     </div>
                 </div>
             </Pop>

@@ -30,7 +30,7 @@ const Navbar = (props) => {
                 </div>
             ) : (
                 <div className="navbar-basket">
-                    <img src={images.basket} alt="" style={{ opacity: "0" }} />
+                    <img src={images.basket} alt="" style={{ display: "none" }} />
                 </div>
 
             )}
@@ -40,9 +40,9 @@ const Navbar = (props) => {
                     <img src={images.green_little_guy} alt="" onClick={handlePopUp} />
                 </div>
             ) : (
-                <div className="navbar-login">
-                    <a href="/#">
-                        <img src={images.green_little_guy} alt="" style={{ opacity: "0" }} />
+                <div className="navbar-login" style={{ display: "none" }}>
+                    <a href="/#" style={{ display: "none" }}>
+                        <img src={images.green_little_guy} alt="" style={{ display: "none" }} />
                     </a>
                 </div>
 
@@ -75,7 +75,7 @@ const Navbar = (props) => {
                                     navigate('/produtor')
                                 }
 
-                                if (document.getElementById('email').value === 'geral@sonae.pt') {
+                                if (document.getElementById('email').value === 'vendemoslegumes@gmail.com') {
                                     navigate('/revendedor')
                                 }
 

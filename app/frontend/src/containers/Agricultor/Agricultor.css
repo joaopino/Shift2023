@@ -13,7 +13,7 @@
 }
 
 .app_agricultor-icon img {
-   width: 15rem; 
+    width: 15rem;
 }
 
 .app_agricultor-center {
@@ -106,7 +106,7 @@
 .app_agricultor-prod2 {
     text-decoration: none;
     color: var(--color-brown);
-    transition: 0.5s ease ;
+    transition: 0.5s ease;
     cursor: pointer;
 }
 
@@ -220,4 +220,61 @@
 .app_agricultor-pop-desc-footer-buttons {
     display: flex;
     gap: 1rem;
+}
+
+.popup-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 90%;
+}
+
+.popup-text label {
+    color: var(--color-brown);
+    font-size: 29px;
+}
+
+.popup-text input {
+    width: 50%;
+    background-color: var(--color-white);
+    border: 3px solid var(--color-green-button);
+    padding: 0.5rem;
+}
+
+.pop_butoonasdasd {
+    background-color: var(--color-green-button);
+    color: var(--color-white);
+    width: 4rem;
+}
+
+.agri-container-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 0 0;
+}
+
+.agri-container-form form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 0 1rem 0;
+}
+
+.app_agricultor-buttona {
+    background-color: var(--color-green-button);
+    color: var(--color-white);
+    border: 0rem;
+    font-weight: 500;
+    font-size: 29px;
+    line-height: 59px;
+    cursor: pointer;
+    margin: 0 1rem 0 0;
+    margin-top: 2rem;
 }

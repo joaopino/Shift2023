@@ -20,7 +20,7 @@ function Pdf() {
 
     return (
         <div className="app_pdf">
-            <Navbar showLogin={true} showBasket={true} />
+            <Navbar showBasket={true} />
             <div className="app_pdf-center">
                 <input type="file" accept=".pdf" onChange={handleFileChange} id="import-pdf-input" />
                 <label htmlFor='import-pdf-input' className="app_pdf-button">Ficheiro PDF</label>
