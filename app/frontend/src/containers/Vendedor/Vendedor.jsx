@@ -95,7 +95,7 @@ function Vendedor() {
 
 
                                 <tr key={item.data}>
-                                    <td width={"350rem"} className='app_agricultor-prod app_agricultor-prod2' /* onClick={handlePopUp} */>Encomendado</td>
+                                    <td width={"350rem"} className='app_agricultor-prod app_agricultor-prod2' onClick={handlePopUp}>Encomendado</td>
                                     <td width={"180rem"} className='app_agricultor-desc'>{item.data}</td>
                                     {item.estado === "T" ? (
                                         <div>
