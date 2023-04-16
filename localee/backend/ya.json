@@ -1,0 +1,10 @@
+{
+    "_id": {
+        "$oid": "643a0316609dd5ae5b9ba9aa"
+    },
+    "email": "joaoa@gmail.com",
+    "address": "Quinta da Portela",
+    "contact": "963908234",
+    "name": "Joao Antonio",
+    "password": "password"
+}
