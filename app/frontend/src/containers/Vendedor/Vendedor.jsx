@@ -25,7 +25,7 @@ function Vendedor() {
 
     return (
         <div className="app_vendedor">
-            <Navbar />
+            <Navbar showBasket={true}/>
             <div className='app_agricultor-lado2'>
                 <div className='app_agricultor-lado'>
                     <div className='app_agricultor-foto'>

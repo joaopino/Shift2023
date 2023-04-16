@@ -7,6 +7,7 @@ import star_green from '../assets/star_green.svg';
 import store from '../assets/store.svg';
 import farmer from '../assets/farmer.svg';
 import reseller from '../assets/reseller.svg';
+import basket from '../assets/basket.svg';
 
 
 const images = {
@@ -18,7 +19,8 @@ const images = {
     star_green,
     store,
     farmer,
-    reseller
+    reseller,
+    basket
 };
 
 export default images;

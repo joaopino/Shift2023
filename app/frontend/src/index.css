@@ -20,9 +20,14 @@ body {
   background-color: var(--color-white);
 }
 
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
 }
 
 :root {

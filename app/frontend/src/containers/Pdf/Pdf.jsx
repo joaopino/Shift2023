@@ -20,15 +20,19 @@ function Pdf() {
 
     return (
         <div className="app_pdf">
-            <Navbar />
+            <Navbar showLogin={true} showBasket={true} />
             <div className="app_pdf-center">
                 <input type="file" accept=".pdf" onChange={handleFileChange} id="import-pdf-input" />
                 <label htmlFor='import-pdf-input' className="app_pdf-button">Ficheiro PDF</label>
             </div>
             <div className="app_pdf-footer-wrapper">
                 <div className="app_pdf-footer">
-                    <button>Voltar</button>
-                    <button>Submeter</button>
+                    <form action="/">
+                        <button>Voltar</button>
+                    </form>
+                    <form action="/list">
+                        <button>Submeter</button>
+                    </form>
                 </div>
             </div>
         </div>

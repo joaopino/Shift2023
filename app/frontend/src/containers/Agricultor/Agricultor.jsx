@@ -30,7 +30,7 @@ function Agricultor() {
 
     return (
         <div className="app_agricultor">
-            <Navbar />
+            <Navbar/>
             <div className='app_agricultor-lado2'>
                 <div className='app_agricultor-lado'>
                     <div className='app_agricultor-foto'>
@@ -89,7 +89,7 @@ function Agricultor() {
                                     <td width={"300rem"} className='app_agricultor-prod app_agricultor-prod2' onClick={handlePopUp}>Encomenda</td>
                                     <td width={"170rem"} className='app_agricultor-desc'>{item.data}</td>
                                     {item.estado === "T" ? (
-                                        <div>
+                                        <div className='app_agricultor-buttons'>
                                             <td width={"300rem"}>
                                                 <button className='app_agricultor-button'>Aceitar</button>
                                             </td>
@@ -158,10 +158,10 @@ function Agricultor() {
                             <span className='app_agricultor-pop-desc-footer-quant'>400€</span>
 
                         </div>
-                        <div className='app_agricultor-pop-desc-footer-buttons'>
+                        {/* <div className='app_agricultor-pop-desc-footer-buttons'>
                             <button className='app_agricultor-button'>Aceitar</button>
                             <button className='app_agricultor-button'>Eliminar</button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </Pop>

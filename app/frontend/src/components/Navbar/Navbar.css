@@ -48,12 +48,13 @@
 }
 
 .navbar-container-form form {
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    margin: 0 0 1rem 0;
 }
 
 .navbar-container-form label {
@@ -112,4 +113,17 @@
     cursor: pointer;
     transition: 0.5s ease;
     height: 2rem ;
+}
+
+.navbar-basket {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.navbar-basket img {
+    width: 4rem;
+    padding: 0.4rem;
+    cursor: pointer;
 }
