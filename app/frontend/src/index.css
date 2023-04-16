@@ -28,5 +28,6 @@ code {
 :root {
   --color-white: #EDE9E4;
   --color-brown: #563631;
-  --color-green: #97b788;
+  --color-green: rgba(152, 184, 137, 40%);
+  --color-green-button: #97B788;
 }
