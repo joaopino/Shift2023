@@ -1,26 +1,36 @@
 import React, { useState } from 'react';
 import { Navbar, Pop } from '../../components'
 import images from '../../constants'
+import { MdOutlineClose } from 'react-icons/md';
 
 import './Agricultor.css'
 
 function Agricultor() {
-    const [dados, setDados] = useState([
+    const [dados] = useState([
         { data: "16/04", estado: "T" },
         { data: "10/04", estado: "F" },
     ]);
-    const [produtos, setProdutos] = useState([
+    const [produtos] = useState([
         { produto: "Batata", quant: "100 kg", preco: "3€/kg" },
         { produto: "Couve", quant: "35 kg", preco: "2€/kg" },
         { produto: "Cenoura", quant: "10 kg", preco: "2€/kg" },
     ]);
 
+    const [list] = useState([
+        { produto: "Batata", quant: "100 Kg" },
+        { produto: "Cenoura", quant: "15 Kg" },
+        { produto: "Cebola", quant: "30 Kg" },
+    ]);
 
     const [btnPopUp, setBtnPopUp] = useState(false);
 
+    function handlePopUp() {
+        setBtnPopUp(!btnPopUp);
+    }
+
     return (
         <div className="app_agricultor">
-            <Navbar />
+            <Navbar/>
             <div className='app_agricultor-lado2'>
                 <div className='app_agricultor-lado'>
                     <div className='app_agricultor-foto'>
@@ -38,30 +48,33 @@ function Agricultor() {
                         </div>
                     </div>
                 </div>
-                <div className='app_agricultor-star'>
-                    <ul>
-                        {
-                            (() => {
-                                var d = [];
-                                for (let i = 0; i < 4; i++) {
-                                    d.push(<img src={images.star_brown} alt="star" />)
-                                }
-                                return d;
+                <div className='app_agricultor-center'>
+                    <div className='app_agricultor-icon'><img src={images.farmer} alt="Productor_icon" /></div>
+                    <div className='app_agricultor-star'>
+                        <ul>
+                            {
+                                (() => {
+                                    var d = [];
+                                    for (let i = 0; i < 4; i++) {
+                                        d.push(<img src={images.star_brown} alt="star" />)
+                                    }
+                                    return d;
 
-                            })()}
-                    </ul>
+                                })()}
+                        </ul>
 
-                    <ul>
-                        {
-                            (() => {
-                                var d = [];
-                                for (let i = 0; i < 1; i++) {
-                                    d.push(<img src={images.star_green} alt="star" />)
-                                }
-                                return d;
+                        <ul>
+                            {
+                                (() => {
+                                    var d = [];
+                                    for (let i = 0; i < 1; i++) {
+                                        d.push(<img src={images.star_green} alt="star" />)
+                                    }
+                                    return d;
 
-                            })()}
-                    </ul>
+                                })()}
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div className='app_agricultor-green'>
@@ -73,10 +86,10 @@ function Agricultor() {
                         <tbody>
                             {dados.map((item) => (
                                 <tr key={item.data}>
-                                    <td width={"300rem"} className='app_agricultor-prod'><a href=''>Encomenda</a></td>
+                                    <td width={"300rem"} className='app_agricultor-prod app_agricultor-prod2' onClick={handlePopUp}>Encomenda</td>
                                     <td width={"170rem"} className='app_agricultor-desc'>{item.data}</td>
                                     {item.estado === "T" ? (
-                                        <div>
+                                        <div className='app_agricultor-buttons'>
                                             <td width={"300rem"}>
                                                 <button className='app_agricultor-button'>Aceitar</button>
                                             </td>
@@ -118,12 +131,40 @@ function Agricultor() {
                 </div>
             </div>
 
-            <Pop
-                trigger={btnPopUp}
-                setTrigger={setBtnPopUp}
+            <Pop trigger={btnPopUp} setTrigger={setBtnPopUp}>
+                <MdOutlineClose fontSize={27} className='close-btn' onClick={() => { setBtnPopUp(false) }} />
+                <div className='app_agricultor-pop'>
+                    <div className="app_agricultor-pop-header">
+                        <span className='app_agricultor-pop-title'>Mega Leguminosas</span>
+                        <span className='app_agricultor-pop-local'>Aveiro</span>
+                        <span className='app_agricultor-pop-email'>vendemoslegumes@gmail.com</span>
+                    </div>
+                    <div className='app_agricultor-pop-desc'>
+                        <span className='app_agricultor-pop-desc-header'>Encomenda</span>
+                        <table style={{ lineHeight: "1.5" }}>
+                        <tbody>
+                            {list.map((item) => (
+                                <tr key={item.prod}>
+                                    <td width={"180rem"} style = {{textAlign: 'left'}} className='app_agricultor-pop-text'>{item.produto}</td>
+                                    <td style = {{textAlign: 'left'}} className='app_agricultor-pop-text'>{item.quant}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                    </div>
+                    <div className='app_agricultor-pop-desc-footer'>
+                        <div className='app_agricultor-pop-desc-footer-data'>
+                            <span className='app_agricultor-pop-desc-footer-total'>Total: </span>
+                            <span className='app_agricultor-pop-desc-footer-quant'>400€</span>
 
-            />
-
+                        </div>
+                        {/* <div className='app_agricultor-pop-desc-footer-buttons'>
+                            <button className='app_agricultor-button'>Aceitar</button>
+                            <button className='app_agricultor-button'>Eliminar</button>
+                        </div> */}
+                    </div>
+                </div>
+            </Pop>
         </div>
     )
 }

@@ -28,7 +28,102 @@
     font-size: 1.5rem;
     font-weight: 700;
     padding: 0.5rem 1rem;
-    border: 1px solid var(--color-brown);
-    border-radius: 5px;
     transition: all 0.3s ease-in-out;
+}
+
+.navbar-pop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-container-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 0 0;
+}
+
+.navbar-container-form form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 0 1rem 0;
+}
+
+.navbar-container-form label {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #FFFFFF;
+    align-self: center;
+}
+
+.navbar-container-form input {
+    width: 20rem;
+    height: 2rem;
+    border: 0.2rem solid var(--color-white);
+    margin: 0.5rem 0rem;
+    box-sizing: border-box;
+    padding: 0 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #563631;
+    background-color: var(--color-white);
+}
+
+.navbar-email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 90%;
+}
+
+.navbar-password {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 90%;
+}
+
+.navbar-container-submit {
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.navbar-container-form button {
+    width: 100%;
+    height: 3rem;
+    border: none;
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-white);
+    background-color: var(--color-brown);
+    cursor: pointer;
+    transition: 0.5s ease;
+    height: 2rem ;
+}
+
+.navbar-basket {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.navbar-basket img {
+    width: 4rem;
+    padding: 0.4rem;
+    cursor: pointer;
 }

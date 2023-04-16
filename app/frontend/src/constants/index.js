@@ -5,6 +5,10 @@ import pino from '../assets/pino.svg';
 import star_brown from '../assets/star_brown.svg';
 import star_green from '../assets/star_green.svg';
 import store from '../assets/store.svg';
+import farmer from '../assets/farmer.svg';
+import reseller from '../assets/reseller.svg';
+import basket from '../assets/basket.svg';
+
 
 const images = {
     logo,
@@ -13,7 +17,10 @@ const images = {
     pino,
     star_brown,
     star_green,
-    store
+    store,
+    farmer,
+    reseller,
+    basket
 };
 
 export default images;
