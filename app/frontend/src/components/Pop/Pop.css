@@ -17,15 +17,12 @@
     width: 100%;
     max-width: 600px;
     background-color: var(--color-white);
-    border-radius: 12px;
 }
 
 .popup-inner .close-btn {
     position: absolute;
     top: 16px;
     right: 16px;
-    background-color: var(--color-brown);
-    border: 0px solid var(--color-brown);
-    color: white;
+    color: var(--color-brown);
     cursor: pointer;
 }
