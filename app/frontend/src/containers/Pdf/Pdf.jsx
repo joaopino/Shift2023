@@ -23,7 +23,13 @@ function Pdf() {
             <Navbar />
             <div className="app_pdf-center">
                 <input type="file" accept=".pdf" onChange={handleFileChange} id="import-pdf-input" />
-                <label className="app_pdf-button">Ficheiro PDF</label>
+                <label htmlFor='import-pdf-input' className="app_pdf-button">Ficheiro PDF</label>
+            </div>
+            <div className="app_pdf-footer-wrapper">
+                <div className="app_pdf-footer">
+                    <button>Voltar</button>
+                    <button>Submeter</button>
+                </div>
             </div>
         </div>
     )
