@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "encomendas",
+  "info": {
+    "singularName": "encomenda",
+    "pluralName": "encomendas",
+    "displayName": "Encomenda",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "data": {
+      "type": "string"
+    },
+    "estado": {
+      "type": "string"
+    },
+    "revendedor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "anuncios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::anuncio.anuncio"
+    }
+  }
+}

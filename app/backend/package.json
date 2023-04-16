@@ -1,20 +1,30 @@
 {
   "name": "backend",
-  "version": "1.0.0",
-  "description": "Node app that connects to MongoDB",
-  "main": "server.js",
-  "type": "module",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
   },
-  "author": "Hugo Barros",
-  "license": "MIT",
+  "devDependencies": {},
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "http-status-codes": "^2.2.0",
-    "mongodb": "^5.2.0",
-    "mongoose": "^7.0.3"
-  }
+    "@strapi/strapi": "4.9.1",
+    "@strapi/plugin-users-permissions": "4.9.1",
+    "@strapi/plugin-i18n": "4.9.1",
+    "better-sqlite3": "8.0.1"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "7f0ea7fa-d630-4fd4-a428-5f7bb4e85cc8"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
 }

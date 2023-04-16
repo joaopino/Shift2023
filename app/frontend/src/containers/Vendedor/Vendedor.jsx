@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Navbar, Pop } from '../../components'
 import images from '../../constants'
+import useFetch from '../../hooks/useFetch.js'
 import { MdOutlineClose } from 'react-icons/md';
 
 import './Vendedor.css'
@@ -23,6 +24,17 @@ function Vendedor() {
         setBtnPopUp(!btnPopUp);
     }
 
+    
+
+    const {loading:userLoading,error:userError,data:userData} = useFetch("http://localhost:1337/api/users/1?filters[tipo][$eq]=Revendedor")
+    // const {loading: encomendasloading,error: encomendaserror,data: encomendasData} = useFetch("http://localhost:1337/api/encomendas?populate=anuncios")
+
+
+    if(userLoading/*  | encomendasloading */) return <p>Loading...</p>
+    if(userError /* | encomendaserror  */) return <p>ERROR</p>
+    console.log(userData)
+
+
     return (
         <div className="app_vendedor">
             <Navbar showBasket={true}/>
@@ -33,13 +45,13 @@ function Vendedor() {
                     </div>
                     <div className='app_agricultor-margin1'>
                         <div className='app_agricultor-nome'>
-                            Mega Leguminosas
+                            {userData.username}
                         </div>
                         <div className='app_agricultor-loc'>
-                            Aveiro
+                            {userData.localizacao}
                         </div>
                         <div className='app_agricultor-email'>
-                            vendemoslegumes@gmail.com
+                            {userData.email}
                         </div>
                     </div>
                 </div>
@@ -80,8 +92,10 @@ function Vendedor() {
                     <table style={{ lineHeight: "5" }}>
                         <tbody>
                             {dados.map((item) => (
+
+
                                 <tr key={item.data}>
-                                    <td width={"350rem"} className='app_agricultor-prod app_agricultor-prod2' onClick={handlePopUp}>Encomendado</td>
+                                    <td width={"350rem"} className='app_agricultor-prod app_agricultor-prod2' /* onClick={handlePopUp} */>Encomendado</td>
                                     <td width={"180rem"} className='app_agricultor-desc'>{item.data}</td>
                                     {item.estado === "T" ? (
                                         <div>
@@ -95,6 +109,9 @@ function Vendedor() {
                                         </td>
                                     )}
                                 </tr>
+                            
+                            
+                            
                             ))}
                         </tbody>
                     </table>
@@ -127,6 +144,7 @@ function Vendedor() {
 
         </div>
     )
+    
 }
 
 export default Vendedor
