@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Navbar, Pop } from '../../components'
 import images from '../../constants'
+import { MdOutlineClose } from 'react-icons/md';
 
 import './Agricultor.css'
 
@@ -17,6 +18,10 @@ function Agricultor() {
 
 
     const [btnPopUp, setBtnPopUp] = useState(false);
+
+    function handlePopUp() {
+        setBtnPopUp(!btnPopUp);
+    }
 
     return (
         <div className="app_agricultor">
@@ -73,7 +78,7 @@ function Agricultor() {
                         <tbody>
                             {dados.map((item) => (
                                 <tr key={item.data}>
-                                    <td width={"300rem"} className='app_agricultor-prod'><a href=''>Encomenda</a></td>
+                                    <td width={"300rem"} className='app_agricultor-prod' onClick={handlePopUp}>Encomenda</td>
                                     <td width={"170rem"} className='app_agricultor-desc'>{item.data}</td>
                                     {item.estado === "T" ? (
                                         <div>
@@ -118,12 +123,42 @@ function Agricultor() {
                 </div>
             </div>
 
-            <Pop
-                trigger={btnPopUp}
-                setTrigger={setBtnPopUp}
+            <Pop trigger={btnPopUp} setTrigger={setBtnPopUp}>
+                <MdOutlineClose fontSize={27} className='close-btn' onClick={() => { setBtnPopUp(false) }} />
+                <div className='app_agricultor-pop'>
+                    <div className="app_agricultor-pop-header">
+                        <span className='app_agricultor-pop-title'>Mega Leguminosas</span>
+                        <span className='app_agricultor-pop-local'>Aveiro</span>
+                        <span className='app_agricultor-pop-email'>vendemoslegumes@gmail.com</span>
+                    </div>
+                    <div className='app_agricultor-pop-desc'>
+                        <span className='app_agricultor-pop-desc-header'>Encomenda</span>
+                        <div>
+                            <span>Batata</span>
+                            <span>100kg</span>
+                        </div>
+                        <div>
+                            <span>Cenoura</span>
+                            <span>15kg</span>
+                        </div>
+                        <div>
+                            <span>Cebola</span>
+                            <span>30kg</span>
+                        </div>
+                    </div>
+                    <div className='app_agricultor-pop-desc-footer'>
+                        <div className='app_agricultor-pop-desc-footer-data'>
+                            <span className='app_agricultor-pop-desc-footer-total'>Total: </span>
+                            <span className='app_agricultor-pop-desc-footer-quant'>400€</span>
 
-            />
-
+                        </div>
+                        <div className='app_agricultor-pop-desc-footer-buttons'>
+                            <button>Aceitar</button>
+                            <button>Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </Pop>
         </div>
     )
 }
