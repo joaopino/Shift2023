@@ -2,7 +2,7 @@ import React from "react";
 
 import { Route, Routes } from "react-router-dom";
 
-import { Landing, Register, Agricultor, Vendedor, Pdf } from "./containers"
+import { Landing, Register, Agricultor, Vendedor, Pdf, List } from "./containers"
 
 const App = () => {
   return (
@@ -13,6 +13,7 @@ const App = () => {
         <Route exact path="/produtor" element={<Agricultor />} />
         <Route exact path="/vendedor" element={<Vendedor />} />
         <Route exact path="/pdf" element={<Pdf />} />
+        <Route exact path="/list" element={<List />} />
       </Routes>
     </div>
   );
